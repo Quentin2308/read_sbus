@@ -55,15 +55,15 @@ def device_test(reader):
     import pigpio
     
     TRANSMITTER_MIN_VAL = 352
-    TRANSMITTER_MAX_VAL = 1796
+    TRANSMITTER_MAX_VAL = 2796
     SERVO_MIN_VAL = 500
     SERVO_MAX_VAL = 2500
 
     YAW_CHANNEL = 1
     PITCH_CHANNEL = 2
     
-    YAW_PIN = 17
-    PITCH_PIN = 18
+    YAW_PIN = 9
+    PITCH_PIN = 36
     
     reader.pi.set_mode(YAW_PIN, pigpio.OUTPUT)
     reader.pi.set_mode(PITCH_PIN, pigpio.OUTPUT)   
@@ -88,7 +88,7 @@ def device_test(reader):
             
             
 #SBUS connected to pin 4
-DATA_PIN = 4
+DATA_PIN = 7
 
 if __name__=="__main__":
     reader = read_sbus_from_GPIO.SbusReader(DATA_PIN)
